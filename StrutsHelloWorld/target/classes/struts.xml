@@ -12,12 +12,12 @@
 		value="ApplicationResources" />
 
 	<package name="default" extends="struts-default" namespace="/">
-		
+
 		<result-types>
 			<result-type name="tiles"
 				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		
+
 		<interceptors>
 			<interceptor name="mylogging"
 				class="br.com.ebix.interceptor.MyLoggingInterceptor">
@@ -27,25 +27,25 @@
 				<interceptor-ref name="defaultStack" />
 			</interceptor-stack>
 		</interceptors>
-		
+
 		<default-interceptor-ref name="loggingStack"></default-interceptor-ref>
-		
+
 		<action name="login" class="br.com.ebix.action.LoginAction">
 			<interceptor-ref name="loggingStack"></interceptor-ref>
 			<result name="success" type="tiles">/welcome.tiles</result>
 			<result name="error">Login.jsp</result>
 		</action>
-		
+
 		<action name="customer"
 			class="br.com.ebix.action.CustomerAction">
 			<result name="success" type="tiles">/customer.success.tiles</result>
 			<result name="input" type="tiles">/customer.tiles</result>
 		</action>
-		
+
 		<action name="customer-form">
 			<result name="success" type="tiles">/customer.tiles</result>
 		</action>
-		
+
 		<action name="userImage"
 			class="br.com.ebix.action.FileUploadAction">
 			<interceptor-ref name="fileUpload">
@@ -55,8 +55,15 @@
 				</param>
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
-			<result name="success">SuccessUserImage.jsp</result>
-			<result name="input">UserImage.jsp</result>
+			<result name="success" type="tiles" >/upload.success.tiles</result>
+			<result name="input" type="tiles">/userimage.tiles</result>
+		</action>
+
+		<action name="ajaxdemo"
+			class="br.com.ebix.action.AjaxAutocomplete">
+			<interceptor-ref name="loggingStack"></interceptor-ref>
+			<result name="success" type="tiles">/ajaxdemo.tiles</result>
+			<result type="tiles">/ajaxdemo.tiles</result>
 		</action>
 
 	</package>
