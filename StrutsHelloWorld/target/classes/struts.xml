@@ -65,7 +65,11 @@
 			<result name="success" type="tiles">/ajaxdemo.tiles</result>
 			<result type="tiles">/ajaxdemo.tiles</result>
 		</action>
-
+		
+		<action name="upload">
+			<result name="success" type="tiles">/userimage.tiles</result>
+		</action>
+		
 	</package>
 
 </struts>

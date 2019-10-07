@@ -11,6 +11,6 @@
 
 	<s:a href="customer-form">- Customer</s:a><br>
 	<s:a href="ajaxdemo">- Ajax</s:a><br>
-	<s:a href="userImage">- Upload</s:a>
+	<s:a href="upload">- Upload</s:a>
 </body>
 </html>
