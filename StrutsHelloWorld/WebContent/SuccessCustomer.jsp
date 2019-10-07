@@ -2,18 +2,13 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>Welcome</title>
+<title>Customer Page - Struts2 Demo | ViralPatel.net</title>
 </head>
 
 <body>
-	<h2>
-		Howdy,
-		<s:property value="username" />
-		...!
-	</h2>
-	
-	<s:a href="Customer.jsp">Add Customer</s:a>
+	<h2>Customer Added Successfully.</h2>
 </body>
 </html>
