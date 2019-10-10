@@ -2,6 +2,9 @@ package br.com.ebix.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import br.com.ebix.model.Login;
+import br.com.ebix.persistence.LoginDao;
+
 public class LoginAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	
@@ -9,12 +12,16 @@ public class LoginAction extends ActionSupport{
 	private String password; 
 	
 	public String execute() {
-		if (this.username.equals("admin") && this.password.equals("admin123")) {
-			return "success";
-		} else {
+		Login login = new Login(username, password);
+		LoginDao ld = new LoginDao();
+		try {
+			ld.loginExiste(login);
+			return SUCCESS;
+		}catch(Exception ex){
 			addActionError(getText("error.login"));
-			return "error";
+			return ERROR;
 		}
+		
 	}
 
 	public String getUsername() {

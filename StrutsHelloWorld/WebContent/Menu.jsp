@@ -9,8 +9,16 @@
 </head>
 <body>
 
-	<s:a href="customer-form">- Customer</s:a><br>
-	<s:a href="ajaxdemo">- Ajax</s:a><br>
-	<s:a href="upload">- Upload</s:a>
+	<s:a href="cadastra-segurado">CADASTRA SEGURADO</s:a>
+	<br>
+	<div class="dropdown-divider"></div>
+	<s:a href="cadastra-seguro">CADASTRA SEGURO</s:a>
+	<br>
+	<div class="dropdown-divider"></div>
+	<s:a href="lista-segurado">LISTA SEGURADO</s:a>
+	<br>
+	<div class="dropdown-divider"></div>
+	<s:a href="lista-seguro">LISTA SEGURO</s:a>
+	<br>
 </body>
 </html>
